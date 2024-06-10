@@ -30,7 +30,11 @@
 
 輸入遞歸克隆 esp-who 專案的 Git 儲存庫，指令 : git clone --recursive https://github.com/espressif/esp-who.git
 
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/c7a15d97-1d7d-4388-8b22-f8a066450cd0)
+
 輸入遞歸克隆 esp-idf 專案的 Git 儲存庫，指令 : git clone --recursive https://github.com/espressif/esp-idf.git
+
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/b7c39213-978d-4a5c-9fae-119e283bff15)
 
 於CMD輸入ls可以當到當前目錄下所有資料
 
