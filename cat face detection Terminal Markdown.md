@@ -1,9 +1,12 @@
 要在windowns系統下使用ESP-IDF tool需要先去下載檔案，網址 : https://dl.espressif.com/dl/esp-idf/
 開啟ESP-IDF 5.2 PowerShell 或 ESP-IDF 5.2 CMD
+
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/ac03cf2d-bdd8-4ef5-9d80-21d0a5b46785)
 開啟exe後，路徑會顯示下安裝所存放的地方 C:\Espressif\frameworks\esp-idf-v5.2.1>
+
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/e7566bf1-580e-4299-af95-dda1c99ebf3b)
 安裝esptool，指令 :  pip install esptool
+
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/34e4e871-eef8-429e-a989-b0200acc9a6a)
 安裝ninja，指令 :  pip install ninja
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/72816451-be36-4613-90be-cb0965949ffa)
