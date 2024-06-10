@@ -1,0 +1,4 @@
+要在windowns系統下使用ESP-IDF tool需要先去下載檔案，網址 : https://dl.espressif.com/dl/esp-idf/
+開啟ESP-IDF 5.2 PowerShell 或 ESP-IDF 5.2 CMD
+開啟exe後，路徑會顯示下安裝所存放的地方 C:\Espressif\frameworks\esp-idf-v5.2.1>
+pip install esptool
