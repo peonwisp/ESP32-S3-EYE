@@ -1,4 +1,37 @@
 要在windowns系統下使用ESP-IDF tool需要先去下載檔案，網址 : https://dl.espressif.com/dl/esp-idf/
 開啟ESP-IDF 5.2 PowerShell 或 ESP-IDF 5.2 CMD
 開啟exe後，路徑會顯示下安裝所存放的地方 C:\Espressif\frameworks\esp-idf-v5.2.1>
-pip install esptool
+安裝esptool，指令 :  pip install esptool
+安裝ninja，指令 :  pip install ninja
+安裝cmake，指令 :  pip install cmake
+創建一個任意名稱的資料夾，舉例: 名稱為esp的資料夾，指令 : mdkir esp
+切換到名為 esp 的目錄，指令 : cd esp 
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp>
+輸入遞歸克隆 esp-who 專案的 Git 儲存庫，指令 : git clone --recursive https://github.com/espressif/esp-who.git
+輸入遞歸克隆 esp-idf 專案的 Git 儲存庫，指令 : git clone --recursive https://github.com/espressif/esp-idf.git
+切換到名為 esp-idf 的目錄，指令 : cd esp-idf
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-idf>
+執行 install.sh 腳本，安裝開發環境，指令 : install.bat
+執行 export.sh 腳本，設置環境變量，指令 : export.bat
+以cat_face_detection_terminal為範例
+切換到上一層路徑，指令 : cd ..
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp>
+切換到名為 esp-who 的目錄，指令 : cd esp-who
+切換到esp-who底下名為 examples 的目錄，指令 : cd examples
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-who\examples>
+examples資料夾內有很多範例，這邊選擇cat_face_detection做說明
+切換到examples底下名為 cat_face_detection 的目錄，指令 : cd cat_face_detection
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-who\examples\cat_face_detection>
+cat_face_detection資料夾內有lcd、terminal、web三個程式碼可用，這邊選擇terminal做說明
+切換到cat_face_detection底下名為 terminal 的目錄，指令 : cd terminal
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-who\examples\cat_face_detection\terminal>
+執行設定目標芯片，指令 : idf.py set-target esp32s3
+執行編譯指令，指令 : idf.py fullclean
+執行建立專案指令，指令 : idf.py build
+此時build完的檔案會出現在資料夾中
+專案建立完後，需要做清除，指令 : idf.py flash
+燒錄會使用到build資料夾底下的bootloader.bin與patition.bin和cat_face_detection_terminal.pin，共三個檔案
+預設的bootloader.bin在build資料夾底下的bootloader資料夾，patition.bin在patition資料夾底下的bootloader資料夾，at_face_detection_terminal.pin則在build資料夾下
+開始燒錄需要注意三個bin檔的位置，如有更動bin檔，燒錄的指令需要做更動，這邊以預設好的路徑做燒錄
+開始燒錄cat_face_detection_terminal，指令 : esptool.py -p COM3 -b 115200 --before default_reset --after hard_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\cat_face_detection_terminal.bin
+最後燒錄完成後，可從CMD看到最後一行字為 Hard resetting via RTS pin...
