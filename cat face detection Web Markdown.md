@@ -147,6 +147,16 @@ cat_face_detection資料夾內有lcd、terminal、web三個程式碼可用，這
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/1cd8ffa1-09d4-408b-a7d1-c793577b0337)
 
-使用putty 或 MobaXterm 來看輸出結果
+手機打開wifi功能，可以看見一個wifi名稱叫 Cat Face Detection且連線Cat Face Detection
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/1b23d477-b53e-4c27-8227-8c203a8773fc)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/2a416b10-8d80-436a-96ad-5045d9a301f2)
+
+手機會開啟一個預設名稱為192.168.4.1的網頁，該網頁可以做一些設定與detection的畫面
+
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/52edc046-3086-4893-ac9a-81776b2456b7)
+
+結果影片 : 
+
+https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/5afa9ff7-f527-43b7-8b10-9175262aedb8
+
+
