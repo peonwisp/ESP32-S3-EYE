@@ -62,7 +62,7 @@
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/2d6d9c1e-7a82-4fea-9226-9ee4bc93cce5)
 
-以cat_face_detection_terminal為範例
+以cat_face_detection_web為範例
 
 切換到上一層路徑，指令 : cd ..
 
@@ -98,50 +98,50 @@ examples資料夾內有很多範例，這邊選擇cat_face_detection做說明
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/5a955070-00f8-4234-b83d-4315e8143efc)
 
-cat_face_detection資料夾內有lcd、terminal、web三個程式碼可用，這邊選擇terminal做說明
+cat_face_detection資料夾內有lcd、terminal、web三個程式碼可用，這邊選擇web做說明
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/cef70842-3275-40c1-b9c5-9289c5cb8163)
 
-切換到cat_face_detection底下名為 terminal 的目錄，指令 : cd terminal
+切換到cat_face_detection底下名為 terminal 的目錄，指令 : cd web
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/e0e3a8c1-246c-4073-b750-a6ca943f1dbd)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/5bea52c6-16e2-47e3-9042-b0fa26aba4ac)
 
-當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-who\examples\cat_face_detection\terminal>
+當前路徑顯示為 C:\Espressif\frameworks\esp-idf-v5.2.1\esp\esp-who\examples\cat_face_detection\web>
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/ceebc668-7489-4377-97ff-d5dd59ec17a0)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/fd9ef94d-4a24-4dd6-850b-92a64533b186)
 
 執行設定目標芯片，指令 : idf.py set-target esp32s3
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/e2e68ccf-7bc7-47d1-ab4b-4bfee82eba01)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/7086e7fe-a118-42f2-bc91-54d735f795e3)
 
 執行編譯指令，指令 : idf.py fullclean
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/0ee79c8c-e947-4164-a428-38493a3a6a0c)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/b0256c3b-7145-4228-9ea4-8eeebd185984)
 
 執行建立專案指令，指令 : idf.py build
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/426c1638-4f46-4401-ab80-a4103a3b8cfe)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/774fffd1-d2b1-4e49-8f2f-db8aa4870430)
 
 此時build完的檔案會出現在資料夾中
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/715bb563-2358-494a-a97f-a95de43c30db)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/69b1d494-80cd-4992-a258-95ebf1ec13af)
 
 專案建立完後，需要做清除，指令 : idf.py flash
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/2d2cb6d1-872c-4b08-a4b3-08d93610756f)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/d8cb4c20-c528-402c-abd4-69bc10da3ca4)
 
 燒錄會使用到build資料夾底下的bootloader.bin與patition.bin和cat_face_detection_terminal.pin，共三個檔案
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/abb1ec58-b579-4ec7-bada-2f4562cad359)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/d5980cfb-8df7-412d-9ddb-81522885621b)
 
-預設的bootloader.bin在build資料夾底下的bootloader資料夾，patition.bin在patition資料夾底下的bootloader資料夾，cat_face_detection_terminal.pin則在build資料夾下
+預設的bootloader.bin在build資料夾底下的bootloader資料夾，patition.bin在patition資料夾底下的bootloader資料夾，cat_face_detection_web.pin則在build資料夾下
 
 開始燒錄需要注意三個bin檔的位置，如有更動bin檔，燒錄的指令需要做更動，這邊以預設好的路徑做燒錄 (console Baud rate 設定任何數字都可以，以115200做說明)
 
 開始燒錄cat_face_detection_terminal，指令 : esptool.py -p COM3 -b 115200 --before default_reset --after hard_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 8MB --flash_freq 
-80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\cat_face_detection_terminal.bin
+80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\cat_face_detection_web.bin
 
-![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/bfd52127-7ead-43d9-9ae0-0488d82c3660)
+![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/07ec40a0-5c5d-4409-8e40-05d957a99dea)
 
 最後燒錄完成後，可從CMD看到最後一行字為 Hard resetting via RTS pin...
 
