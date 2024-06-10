@@ -150,3 +150,8 @@ cat_face_detection資料夾內有lcd、terminal、web三個程式碼可用，這
 使用putty 或 MobaXterm 來看輸出結果
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/1b23d477-b53e-4c27-8227-8c203a8773fc)
+
+影片如下 : 
+
+https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/1f4cb22b-ebf3-4571-9f2a-75d146a163a8
+
