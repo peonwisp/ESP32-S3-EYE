@@ -1,4 +1,4 @@
-要在windowns系統下使用ESP-IDF tool需要先去下載檔案，網址 : https://dl.espressif.com/dl/esp-idf/
+要在windows系統下使用ESP-IDF tool需要先去下載檔案，網址 : https://dl.espressif.com/dl/esp-idf/
 
 開啟ESP-IDF 5.2 PowerShell 或 ESP-IDF 5.2 CMD
 
