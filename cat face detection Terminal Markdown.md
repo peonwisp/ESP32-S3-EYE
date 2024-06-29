@@ -20,7 +20,7 @@
 
 ![image](https://github.com/peonwisp/ESP32-S3-EYE/assets/155973617/530420e9-fa21-4d87-b67c-5518829d4c9b)
 
-創建一個任意名稱的資料夾，舉例: 名稱為esp的資料夾，指令 : mdkir esp
+創建一個任意名稱的資料夾，舉例: 名稱為esp的資料夾，指令 : mkdir esp
 
 切換到名為 esp 的目錄，指令 : cd esp 
 
